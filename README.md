@@ -13,6 +13,8 @@ composer require zerone/payssion
 
 ## 使用
 
+### 创建交易
+
 ```
 $payssion = new PayssionClient('your api key', 'your secretkey');
 
@@ -24,7 +26,8 @@ try {
         'pm_id' => 'alipay_cn',
         'description' => 'order description',
         'order_id' => 'your order id',          //your order id
-        'return_url' => 'your return url'   //optional, the return url after payments (for both of paid and non-paid)
+        //optional, the return url after payments (for both of paid and non-paid)
+        'return_url' => 'your return url'   
     ];
 	$response = $payssion->create($data);
 } catch (Exception $e) {
@@ -50,3 +53,5 @@ if ($payssion->isSuccess()) {
 }
 
 ```
+
+[异步通知代码参考](https://github.com/ZeroneLuo/payssion-sdk/blob/master/payssion-php/samples/sample_postback.php)
