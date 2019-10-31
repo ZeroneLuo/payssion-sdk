@@ -1,0 +1,20 @@
+{
+    "name": "zerone/payssion",
+    "description": "payssion-php composer方式安装整合",
+    "type": "library",
+    "require": {
+        "php": ">=5.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zerone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "payssion\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
