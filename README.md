@@ -15,7 +15,7 @@ composer require zerone/payssion
 
 ### 创建交易
 
-```
+```php
 $payssion = new PayssionClient('your api key', 'your secretkey');
 
 $response = null;
@@ -29,10 +29,10 @@ try {
         //optional, the return url after payments (for both of paid and non-paid)
         'return_url' => 'your return url'   
     ];
-	$response = $payssion->create($data);
+    $response = $payssion->create($data);
 } catch (Exception $e) {
-	//handle exception
-	echo "Exception: " . $e->getMessage();
+    //handle exception
+    echo "Exception: " . $e->getMessage();
 }
 
 if ($payssion->isSuccess()) {
